@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,5 +29,12 @@ public class PlayerController : MonoBehaviour
 
     public void CollectPickUp() {
         score++;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Respawn")) {
+            SceneManager.LoadScene(0);
+        }
     }
 }
