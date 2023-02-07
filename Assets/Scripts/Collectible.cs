@@ -20,6 +20,7 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag("Player")) {
             other.BroadcastMessage("CollectPickUp");
+            gameObject.SetActive(false);
         }
     }
 }

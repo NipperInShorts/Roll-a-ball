@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        numberOfCollectibles = GameObject.FindObjectsOfType<Collectible>().Length;
     }
 
     // Update is called once per frame
@@ -27,6 +28,8 @@ public class PlayerController : MonoBehaviour
     }
 
     public void CollectPickUp() {
+        score++;
+
         Debug.Log($"Score:  {score}");
         Debug.Log($"Collections:  {numberOfCollectibles}");
         Debug.Log("Pickup Collected");
