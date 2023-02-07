@@ -29,9 +29,5 @@ public class PlayerController : MonoBehaviour
 
     public void CollectPickUp() {
         score++;
-
-        Debug.Log($"Score:  {score}");
-        Debug.Log($"Collections:  {numberOfCollectibles}");
-        Debug.Log("Pickup Collected");
     }
 }
