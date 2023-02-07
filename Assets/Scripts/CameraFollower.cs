@@ -11,7 +11,7 @@ public class CameraFollower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,5 +20,10 @@ public class CameraFollower : MonoBehaviour
         Vector3 endPosition = player.transform.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, endPosition, smoothSpeed);
         transform.position = smoothedPosition;
+
+        if (Input.GetMouseButton(1))
+        {
+            Debug.Log("Camera look");
+        }
     }
 }
